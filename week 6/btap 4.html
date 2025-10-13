@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flower Shop Navigation</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+    }
+
+    /* Header container */
+    #header {
+      background: url('images/header.jpg') no-repeat center/cover;
+      width: 900px;
+      height: 200px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Logo image */
+    #logo {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #logo img {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Navigation bar */
+    #menu_top {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Main menu */
+    .level1 {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    .level1 > li {
+      position: relative;
+    }
+
+    .level1 > li > a {
+      color: #7b3f00;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .level1 > li > a:hover {
+      color: #228B22;
+      transform: scale(1.1);
+    }
+
+    /* Dropdown menu */
+    .level2 {
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      list-style: none;
+      background: #fff;
+      margin: 0;
+      padding: 8px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      min-width: 150px;
+      z-index: 99;
+    }
+
+    .level2 li {
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .level2 li:hover {
+      background: #f0f0f0;
+      color: #228B22;
+    }
+
+    /* Show dropdown on hover */
+    .level1 li:hover .level2 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div id="logo">
+      <img src="flower shop.jpg" width="800" height="160" alt="Flower Shop" />
+    </div>
+
+    <nav id="menu_top">
+      <ul class="level1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gioithieu.html">Introduction</a></li>
+        <li><a href="#">Flower Category</a>
+          <ul class="level2">
+            <li>Sun Flower</li>
+            <li>Rose Flower</li>
+            <li>Lily Flower</li>
+            <li>Tulips Flower</li>
+          </ul>
+        </li>
+        <li><a href="dangky.html">Register</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="lienhe.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
